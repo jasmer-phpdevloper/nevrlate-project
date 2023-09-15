@@ -1,0 +1,43 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const passport = require("passport");
+const cors = require("cors")
+const path = require('path');
+//Routes Define
+const users = require("./routes/api/users");
+const meetingRoute=require("./routes/api/meeting")
+const app = express();
+require('dotenv').config();
+// Body parser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use(cors())
+app.use(cors({
+  origin: ['http://localhost:3000'],
+}))
+//DB Config
+const db = require("./config/keys").mongoURI;
+
+app.use('/assets/uploads', express.static(path.join(__dirname, 'assets/uploads')));
+
+//Connect to MongoDB
+mongoose
+  .connect(db)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
+
+//Passport Middleware
+app.use(passport.initialize());
+
+//Passport Config
+require("./config/passport")(passport);
+
+// Use Routes
+app.use("/api/users", users);
+app.use('/api/', meetingRoute);
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => console.log(`Server running on port ${port}`));

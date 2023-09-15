@@ -1,0 +1,120 @@
+/* CustomCalendar.css */
+/* You can define your custom styles here */
+/* For example: */
+
+/* Change the color of the selected date */
+
+.react-calendar__tile--active {
+    background: #8748FF !important;
+    color: white;
+}
+
+
+/* Apply a box shadow to the calendar */
+.custom-calendar-container {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust the day names header styles */
+.react-calendar__month-view__weekdays__weekday {
+  font-weight: bold;
+  text-align: center;
+}
+
+.react-calendar {
+    width: 100%;
+    box-shadow: 0px 0px 9px 6px #c1c1c1;
+    border-radius: 6px;
+}
+
+/* .table_set {
+  width: 100%;
+} */
+/* .bgTbody  {   width: 100%;
+  border-top: 1px solid #c1c1c1;
+  border-left: none;
+  border-right: none;
+
+} */
+td.next {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: #585858;
+  text-align: left;
+}
+button.clickbutton {
+  background-color: #000000;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  width: 65px;
+  height: 24px;
+  padding: 2px 10px;
+  color: #FFFFFF;
+  border-radius: 30px;
+  letter-spacing: 0em;
+}
+button.clickbutton span {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+button.cbutton {
+  width: 197px;
+  height: 42px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid;
+  color: #232323;
+  font-size: 16px;
+}
+.andButton {
+
+  text-align: end;
+}
+.td-flex{
+  padding: 10px 0px;
+  margin-bottom: 10px 0px;
+}
+.tr-border{
+  border-bottom: 1px solid #c1c1c1;
+}
+/*  */
+.main-box {
+  display: flex;
+   margin-top: 10px;
+    padding: 10px 0px;
+    justify-content: space-between;
+    border-top: 1px solid #c1c1c1;
+    border-left: none;
+    border-right: none; 
+    align-items: center;
+  }
+
+
+.box1 .btn-box {
+    width: 114px;
+    height: 42px;
+    margin-right: 4px;
+    padding: 9px 14px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    color: #585858;
+}
+
+.box1 .active {
+    background: #8748FF;
+    color: #fff;
+}
+
+.boxSearch{
+    width: 261px;
+    height: 42px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    margin: 8px;
+    padding: 11px 26px;
+}
